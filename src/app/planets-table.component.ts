@@ -25,6 +25,7 @@ const table: TableDescription = {
   selector: 'my-planets-table',
   template: `
     <form [formGroup]="filterForm" class="clr-form">
+      <label class="clr-control-label">Filter by name</label>
       <input class="clr-input" formControlName="name" (change)="onFilter()"/>
     </form>
     <hlc-clr-table [table]="table" [dataProvider]="dataProvider"></hlc-clr-table>
