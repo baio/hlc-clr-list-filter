@@ -68,7 +68,8 @@ export class TableComponent {
         const { page, filters } = state;
         return httpClient
           .get('https://swapi.co/api/planets', {
-            params: { page, search: filters.name || '' }
+            // when there is filter reset pagge to first one
+            params: { page: filters.name ? 1 : page, search: filters.name || '' }
           }).pipe(
             catchError(err => {
               return throwError('SWAPI returns error');

@@ -41,7 +41,7 @@ const tableDataProviderConfig: TableDataProviderConfig = {
       paginator: {
         pageIndex: response.next ?
           parseInt(response.next.split('page=')[1]) - 1 :
-          (response.previous ? parseInt(response.previous.split('page=')[1]) + 1 : 0),
+          (response.previous ? parseInt(response.previous.split('page=')[1]) + 1 : 1),
         pageSize: 10,
         length: response.count
       }
