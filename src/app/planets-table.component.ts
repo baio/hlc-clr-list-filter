@@ -63,6 +63,8 @@ export class TableComponent {
         // not in raw dto object.
         // Correct architecture requires more code, here we simplify things for the sample
         // and map dto models to component models directly without intermediate application layer
+
+        // state value here already in app model format, see app.module
         const { page, filters } = state;
         return httpClient
           .get('https://swapi.co/api/planets', {
