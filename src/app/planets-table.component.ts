@@ -52,7 +52,7 @@ export class TableComponent {
 
     this.filterForm = new FormGroup({name: new FormControl()});
 
-    // link filter form to the table, now filter value for this table will be used to load data
+    // link filter form to the table, now filter value from this form will be used when loading data
     filterService.setForm(this.filterForm);
 
     this.dataProvider = {
@@ -68,7 +68,7 @@ export class TableComponent {
         const { page, filters } = state;
         return httpClient
           .get('https://swapi.co/api/planets', {
-            // when there is filter reset pagge to first one
+            // when there is filter reset page to first one
             params: { page: filters.name ? 1 : page, search: filters.name || '' }
           }).pipe(
             catchError(err => {
