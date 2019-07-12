@@ -35,7 +35,6 @@ const tableDataProviderConfig: TableDataProviderConfig = {
   },
   // map dto response object to component model object
   mapResult(response: any): Table.Data.Result {
-    debugger;
     return {
       // here we just fake required id field for the row 
       rows: response.results.map((m, i) => ({ id: i, ...m })),
