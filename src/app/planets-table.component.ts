@@ -80,7 +80,7 @@ export class TableComponent {
   }
 
   onFilter() {
-    // refresh state of the component
+    // request reload table data
     // it will take filter value from the linked form from above
     this.tableComponent.refreshStateForce();
   }
