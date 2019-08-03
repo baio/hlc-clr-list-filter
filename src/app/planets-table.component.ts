@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl } from '@angular/forms';
 
 // Provide table UI definition in js object
-const table: TableDescription = {
+const definition: Table.Definition = {
   cols: [
     {
       id: 'name',
@@ -28,7 +28,7 @@ const table: TableDescription = {
       <label class="clr-control-label">Filter by name</label>
       <input class="clr-input" formControlName="name" (change)="onFilter()"/>
     </form>
-    <hlc-clr-table [table]="table" [dataProvider]="dataProvider"></hlc-clr-table>
+    <hlc-clr-table [definition]="definition" [dataProvider]="dataProvider"></hlc-clr-table>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
@@ -40,7 +40,7 @@ export class TableComponent {
 
   @ViewChild(HlcClrTableComponent, { static: true }) tableComponent: HlcClrTableComponent;
 
-  readonly table = table;
+  readonly definition = definition;
   readonly dataProvider: Table.Data.DataProvider;
   readonly filterForm: FormGroup;
 

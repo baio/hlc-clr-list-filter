@@ -18,7 +18,7 @@
     "@ng-holistic/clr-common": "0.0.61",
     "@ng-holistic/clr-controls": "0.0.61",
     "@ng-holistic/clr-forms": "0.0.61",
-    "@ng-holistic/clr-list": "^0.0.62",
+    "@ng-holistic/clr-list": "^0.0.75",
     "@ng-holistic/forms": "0.0.61",
     "@ng-holistic/typeahead": "^0.0.56",
     "@webcomponents/custom-elements": "1.2.4",
